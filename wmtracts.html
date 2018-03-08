@@ -1,0 +1,342 @@
+<html>
+<head>
+
+<title>White Matter Tracts</title>
+
+<script type="text/javascript" src="http://get.goXTK.com/xtk.js"></script>
+
+
+<script type="text/javascript">
+    //window.onload = function() {
+    var run = function() {
+        renderer = new X.renderer3D();
+        renderer.container = 'r';
+        renderer.init();
+        
+        CFMA = new X.object();
+        
+        var cfma = new X.mesh();
+        cfma.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Callosum_Forceps_Major_surf.vtk';
+        cfma.caption = 'Callosum Forceps Major';
+        cfma.color = [0.04850526316,0.6792842105,0.7341421053];
+        CFMA.children.push(cfma);
+        
+        CFMI = new X.object();
+        
+        var cfmi = new X.mesh();
+        cfmi.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Callosum_Forceps_Minor_surf.vtk';
+        cfmi.caption = 'Callosum Forceps Minor';
+        cfmi.color = [0.1400526316,0.7084789474,0.6680368421];
+        
+        CFMI.children.push(cfmi);
+        
+        LAF = new X.object();
+        
+        var laf = new X.mesh();
+        laf.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Left_Arcuate_surf.vtk';
+        laf.caption = 'Left Arcuate';
+        laf.color = [0.9595947368,0.8869315789,0.1189526316]
+        
+        LAF.children.push(laf);
+        
+        RAF = new X.object();
+        var raf = new X.mesh();
+        raf.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Right_Arcuate_surf.vtk';
+        raf.caption = 'Right Arcuate';
+        raf.color = [0.9763,0.9831,0.0538]
+
+        RAF.children.push(raf)
+        
+        LCC = new X.object();
+        var lcc = new X.mesh();
+        lcc.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Left_Cingulum_Cingulate_surf.vtk';
+        lcc.caption = 'Left Cingulum Cingulate';
+        lcc.color = [0.06577894737,0.4776315789,0.8531631579]
+
+        LCC.children.push(lcc)
+        
+        RCC = new X.object();
+        var rcc = new X.mesh();
+        rcc.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Right_Cingulum_Cingulate_surf.vtk';
+        rcc.caption = 'Right Cingulum Cingulate';
+        rcc.color = [0.07765263158,0.5299631579,0.8278947368]
+
+        RCC.children.push(rcc)
+        
+        LCH = new X.object();
+        var lch = new X.mesh();
+        lch.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Left_Cingulum_Hippocampus_surf.vtk';
+        lch.caption = 'Left Cingulum Hippocampus';
+        lch.color = [0.03562105263,0.5946210526,0.8203210526]
+
+        LCH.children.push(lch)
+        
+        RCH = new X.object();
+        var rch = new X.mesh();
+        rch.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Right_Cingulum_Hippocampus_surf.vtk';
+        rch.caption = 'Right Cingulum Hippocampus';
+        rch.color = [0.02300526316,0.6443421053,0.7882842105]
+
+        RCH.children.push(rch)
+        
+        LCS = new X.object();
+        var lcs = new X.mesh();
+        lcs.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Left_Corticospinal_surf.vtk';
+        lcs.caption = 'Left Corticospinal';
+        lcs.color = [0.08428421053,0.3471947368,0.8573315789]
+
+        LCS.children.push(lcs)
+        
+        RCS = new X.object();
+        var rcs = new X.mesh();
+        rcs.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Right_Corticospinal_surf.vtk';
+        rcs.caption = 'Right Corticospinal';
+        rcs.color = [0.01574736842,0.4257052632,0.8789315789]
+
+        RCS.children.push(rcs)
+        
+        LIFOF = new X.object();
+        var lifof = new X.mesh();
+        lifof.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Left_IFOF_surf.vtk';
+        lifof.caption = 'Left IFOF';
+        lifof.color = [0.2652894737,0.7327157895,0.5916368421]
+
+        LIFOF.children.push(lifof)
+        
+        RIFOF = new X.object();
+        var rifof = new X.mesh();
+        rifof.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Right_IFOF_surf.vtk';
+        rifof.caption = 'Right IFOF';
+        rifof.color = [0.4175631579,0.7470789474,0.5142157895]
+
+        RIFOF.children.push(rifof)
+        
+        LILF = new X.object();
+        var lilf = new X.mesh();
+        lilf.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Left_ILF_surf.vtk';
+        lilf.caption = 'Left ILF';
+        lilf.color = [0.5624210526,0.7486894737,0.4528842105]
+        
+        LILF.children.push(lilf)
+        
+        RILF = new X.object();
+        var rilf = new X.mesh();
+        rilf.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Right_ILF_surf.vtk';
+        rilf.caption = 'Right IFOF';
+        rilf.color = [0.6871684211,0.7432631579,0.4029421053]
+        
+        RILF.children.push(rilf)
+        
+        LSLF = new X.object();
+        var lslf = new X.mesh();
+        lslf.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Left_SLF_surf.vtk';
+        lslf.caption = 'Left SLF';
+        lslf.color = [0.7996473684,0.7343736842,0.3576473684]
+        
+        LSLF.children.push(lslf)
+        
+        RSLF = new X.object();
+        var rslf = new X.mesh();
+        rslf.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Right_SLF_surf.vtk';
+        rslf.caption = 'Right IFOF';
+        rslf.color = [0.9056631579,0.7261052632,0.3104684211]
+        
+        RSLF.children.push(rslf)
+        
+        LTR = new X.object();
+        var ltr = new X.mesh();
+        ltr.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Left_Thalamic_Radiation_surf.vtk';
+        ltr.caption = 'Left Thalamic Radiation';
+        ltr.color = [0.2081,0.1663,0.5292]
+        
+        LTR.children.push(ltr)
+        
+        RTR = new X.object();
+        var rtr = new X.mesh();
+        rtr.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Right_Thalamic_Radiation_surf.vtk';
+        rtr.caption = 'Right Thalamic Radiation';
+        rtr.color = [0.2052473684,0.2466526316,0.6930631579]
+        
+        RTR.children.push(rtr)
+        
+        LU = new X.object();
+        var lu= new X.mesh();
+        lu.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Left_Uncinate_surf.vtk';
+        lu.caption = 'Left Thalamic Radiation';
+        lu.color = [0.9944105263,0.7464157895,0.2389842105]
+        
+        LU.children.push(lu)
+        
+        RU = new X.object();
+        var ru = new X.mesh();
+        ru.file = 'https://raw.githubusercontent.com/kitchell/wmtractvtks/master/Right_Uncinate_surf.vtk';
+        ru.caption = 'Right Thalamic Radiation';
+        ru.color = [0.9847368421,0.8141052632,0.1733684211]
+        
+        RU.children.push(ru)
+        
+        
+        renderer.add(CFMA);
+        renderer.add(CFMI);
+        renderer.add(LAF);
+        renderer.add(RAF);
+        renderer.add(LCC);
+        renderer.add(RCC);
+        renderer.add(LCH);
+        renderer.add(RCH);
+        renderer.add(LCS);
+        renderer.add(RCS);
+        renderer.add(LIFOF);
+        renderer.add(RIFOF);
+        renderer.add(LILF);
+        renderer.add(RILF);
+        renderer.add(LSLF);
+        renderer.add(RSLF);
+        renderer.add(LTR);
+        renderer.add(RTR);
+        renderer.add(LU);
+        renderer.add(RU);
+        renderer.camera.up = [0,0,1];
+        renderer.camera.position = [-300,0,0];
+        
+        
+        renderer.render();
+    };
+</script>
+
+    
+<style type="text/css">
+    body {
+        font-family: sans-serif;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+div.anatomyBox {
+    background-color: #000000;
+    width: 20%;
+    height: 36px;
+    margin-top: 1px;
+    float: right;
+    line-height: 36px;
+}
+
+div.anatomyBox span {
+    color: #ffffff;
+    font-size: .9em;
+    vertical-align: middle;
+    margin-left: 5px;
+    cursor: hand;
+}
+
+.tinyText {
+    font-size: 0.5em;
+}
+
+</style>
+<script type="text/javascript">
+    function toggleVisibility(objectname) {
+        
+        // retrieve object
+        object = eval(objectname);
+        // toggle visibility
+        object.visible = !object.visible;
+        
+        // update checkbox
+        document.getElementById(objectname + '_checkbox').checked = object
+        .visible;
+        
+    }
+</script>
+
+
+</head>
+<body onload="run()">
+    
+    <!-- the container for the renderer -->
+    <div id="r"
+        style="background-color: #000000; width: 80%; height: 100%; float: left;"></div>
+    
+    <!-- the sidebar -->
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('CFMA');"><input
+            type="checkbox" id="CFMA_checkbox" checked>Callosum Forcep Major</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('CFMI');"><input
+            type="checkbox" id="CFMI_checkbox" checked>Callosum Forceps Minor</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('LAF');"><input
+            type="checkbox" id="LAF_checkbox" checked>Left Arcuate</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('RAF');"><input
+            type="checkbox" id="RAF_checkbox" checked>Right Arcuate</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('LCC');"><input
+            type="checkbox" id="LCC_checkbox" checked>Left Cingulum Cingulate</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('RCC');"><input
+            type="checkbox" id="RCC_checkbox" checked>Right Cingulum Cingulate</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('LCH');"><input
+            type="checkbox" id="LCH_checkbox" checked>Left Cingulum Hippocampus</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('RCH');"><input
+            type="checkbox" id="RCH_checkbox" checked>Right Cingulum Hippocampus</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('LCS');"><input
+            type="checkbox" id="LCS_checkbox" checked>Left Corticospinal</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('RCS');"><input
+            type="checkbox" id="RCS_checkbox" checked>Right Corticospinal</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('LIFOF');"><input
+            type="checkbox" id="LIFOF_checkbox" checked>Left IFOF</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('RIFOF');"><input
+            type="checkbox" id="RIFOF_checkbox" checked>Right IFOF</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('LILF');"><input
+            type="checkbox" id="LILF_checkbox" checked>Left ILF</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('RILF');"><input
+            type="checkbox" id="RILF_checkbox" checked>Right ILF</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('LSLF');"><input
+            type="checkbox" id="LSLF_checkbox" checked>Left SLF</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('RSLF');"><input
+            type="checkbox" id="RSLF_checkbox" checked>Right SLF</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('LTR');"><input
+            type="checkbox" id="LTR_checkbox" checked>Left Thalamic Radiation</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('RTR');"><input
+            type="checkbox" id="RTR_checkbox" checked>Right Thalamic Radiation</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('LU');"><input
+            type="checkbox" id="LU_checkbox" checked>Left Uncinate</span>
+    </div>
+    <div class="anatomyBox">
+        <span onClick="toggleVisibility('RU');"><input
+            type="checkbox" id="RU_checkbox" checked>Right Uncinate</span>
+    </div>
+</body>
+</html>
